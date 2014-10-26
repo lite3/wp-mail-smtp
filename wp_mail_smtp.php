@@ -366,7 +366,7 @@ function wp_mail_smtp_mail_from ($orig) {
 	// End of copied code
 	
 	// If the from email is not the default, return it unchanged
-	if ( $orig != $default_from ) {
+	if ( $orig != $default_from && is_email($orig)) {
 		return $orig;
 	}
 	
